@@ -1,5 +1,6 @@
 package net.buscacio.service;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.io.ByteArrayResource;
 import org.springframework.stereotype.Service;
 
@@ -14,6 +15,7 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
 @Service
+@Slf4j
 public class ArchetypeService {
 
     public ByteArrayResource generateProject(String groupId, String artifactId) throws IOException, InterruptedException {
@@ -65,7 +67,7 @@ public class ArchetypeService {
                             Files.copy(path, zs);
                             zs.closeEntry();
                         } catch (IOException e) {
-                            System.err.println(e);
+                            log.error(e.getMessage());
                         }
                     });
         }
