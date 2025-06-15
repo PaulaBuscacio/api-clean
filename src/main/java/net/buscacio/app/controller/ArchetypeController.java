@@ -23,6 +23,7 @@ public class ArchetypeController {
 
         ByteArrayResource resource = archetypeService.generateProject(requestDTO.groupId(), requestDTO.artifactId());
         byte[] zipContent = resource.getByteArray();
+
         return ResponseEntity.ok()
                 .contentType(MediaType.APPLICATION_OCTET_STREAM)
                 .contentLength(zipContent.length)
