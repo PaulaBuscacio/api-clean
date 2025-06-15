@@ -19,8 +19,11 @@ import java.util.zip.ZipOutputStream;
 public class ArchetypeService {
 
     public ByteArrayResource generateProject(String groupId, String artifactId) throws IOException, InterruptedException {
+
+        String archetypePath = "src/main/resources/archetype";
+
         List<String> commands = Arrays.asList("C:\\maven\\apache-maven-3.9.9\\bin\\mvn.cmd", "archetype:generate",
-                "-DarchetypeCatalog=local",
+                "-DarchetypeRepository=file://" + archetypePath,
                 "-DarchetypeGroupId=net.buscacio",
                 "-DarchetypeArtifactId=clean-archetype-archetype",
                 "-DarchetypeVersion=1.0.0",
