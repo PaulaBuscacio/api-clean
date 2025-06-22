@@ -22,7 +22,7 @@ public class ArchetypeService {
 
         String archetypePath = "src/main/resources/archetype";
 
-        List<String> commands = Arrays.asList("C:\\maven\\apache-maven-3.9.9\\bin\\mvn.cmd", "archetype:generate",
+        List<String> commands = Arrays.asList("D:\\Program Files\\apache-maven-3.9.10\\bin\\mvn.cmd", "archetype:generate",
                 "-DarchetypeRepository=file://" + archetypePath,
                 "-DarchetypeGroupId=net.buscacio",
                 "-DarchetypeArtifactId=clean-archetype-archetype",

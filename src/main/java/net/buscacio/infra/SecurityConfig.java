@@ -16,7 +16,8 @@ public class SecurityConfig {
                 .csrf(AbstractHttpConfigurer::disable)
                 .cors(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/archetype").permitAll()) // Permite acesso ao endpoint /archetype
+                        .requestMatchers("/actuator/**", "/archetype") // Permite acesso ao endpoint /archetype
+                        .permitAll())
                 .build();
     }
 
