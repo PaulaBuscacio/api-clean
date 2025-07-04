@@ -1,6 +1,8 @@
 package net.buscacio.service;
 
+
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.ByteArrayResource;
 import org.springframework.stereotype.Service;
 
@@ -20,10 +22,7 @@ public class ArchetypeService {
 
     public ByteArrayResource generateProject(String groupId, String artifactId) throws IOException, InterruptedException {
 
-        String archetypePath = "src/main/resources/archetype";
-
-        List<String> commands = Arrays.asList("D:\\Program Files\\apache-maven-3.9.10\\bin\\mvn.cmd", "archetype:generate",
-                "-DarchetypeRepository=file://" + archetypePath,
+        List<String> commands = Arrays.asList("mvn", "archetype:generate",
                 "-DarchetypeGroupId=net.buscacio",
                 "-DarchetypeArtifactId=clean-archetype-archetype",
                 "-DarchetypeVersion=1.0.0",
