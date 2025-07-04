@@ -1,7 +1,0 @@
-net\buscacio\app\dto\ArchetypeRequestDTO.class
-net\buscacio\app\controller\ArchetypeController.class
-net\buscacio\infra\RestControllerAdvice.class
-net\buscacio\infra\SecurityConfig.class
-net\buscacio\service\ArchetypeService.class
-net\buscacio\CleanAPIApplication.class
-net\buscacio\service\ArchetypeService$1.class
